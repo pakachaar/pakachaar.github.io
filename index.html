@@ -1,189 +1,593 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pakistani Pickles Guide | Traditional Achar & Murabba</title>
-  <meta name="description" content="A complete Pakistani pickles guide exploring traditional achar, murabba, cultural importance, homemade methods, and authentic desi flavors.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistani Pickles Guide | Traditional Achar & Murabba</title>
+    <meta name="description" content="A complete Pakistani pickles guide exploring traditional achar, murabba, cultural importance, homemade methods, and authentic desi flavors.">
+    <meta name="keywords" content="Pakistani pickles, achar guide, murabba, traditional preserves, desi pickles, homemade achar">
+    <meta property="og:title" content="Pakistani Pickles Guide | Traditional Achar & Murabba">
+    <meta property="og:description" content="Explore the cultural importance and traditions of Pakistani pickles and preserves">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #c7522a;
+            --secondary: #e5c185;
+            --accent: #74b49b;
+            --dark: #2d3142;
+            --light: #f7f7f2;
+            --cream: #fbf8f3;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: var(--dark);
+            background: var(--cream);
+            line-height: 1.9;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background Pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(116, 180, 155, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(199, 82, 42, 0.05) 0%, transparent 50%);
+            z-index: -1;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(20px, -20px); }
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(165deg, var(--primary) 0%, var(--dark) 100%);
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        .hero::after {
+            content: '🥒';
+            position: absolute;
+            font-size: 25rem;
+            opacity: 0.03;
+            right: -5rem;
+            top: 50%;
+            transform: translateY(-50%) rotate(-15deg);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: white;
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            color: var(--secondary);
+            font-style: italic;
+            font-weight: 300;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: -80px auto 0;
+            padding: 0 2rem 4rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Content Card */
+        .content-card {
+            background: white;
+            border-radius: 24px;
+            padding: 4rem 4rem 3rem;
+            box-shadow: 
+                0 20px 60px rgba(0,0,0,0.08),
+                0 0 1px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        /* Decorative Corner */
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--accent) 0%, transparent 100%);
+            border-radius: 0 24px 0 100%;
+            opacity: 0.15;
+        }
+
+        /* Intro Section */
+        .intro {
+            font-size: 1.15rem;
+            color: var(--dark);
+            line-height: 2;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(to right, var(--light) 0%, transparent 100%);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+        }
+
+        /* Typography */
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin: 3rem 0 1.5rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin: 2.5rem 0 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        h3::before {
+            content: '◆';
+            color: var(--accent);
+            font-size: 0.8em;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #4a4a4a;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #fff9f0 0%, #ffe8d6 100%);
+            border: 2px solid var(--secondary);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 8rem;
+            color: var(--secondary);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .highlight-box p {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 0;
+        }
+
+        /* Link Styling */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            transition: all 0.3s ease;
+            padding-bottom: 2px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--primary);
+        }
+
+        /* Special Section Cards */
+        .section-card {
+            background: linear-gradient(135deg, var(--light) 0%, white 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 6px solid var(--accent);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        /* Icon List */
+        .icon-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .icon-list li {
+            padding: 1rem 0;
+            padding-left: 3rem;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .icon-list li::before {
+            content: '🌶️';
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Sidebar Info Box */
+        .info-box {
+            background: var(--dark);
+            color: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            box-shadow: 0 12px 32px rgba(45, 49, 66, 0.3);
+        }
+
+        .info-box h3 {
+            color: var(--secondary);
+            margin-top: 0;
+        }
+
+        .info-box h3::before {
+            color: var(--secondary);
+        }
+
+        .info-box p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* Divider */
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            margin: 4rem 0;
+            border-radius: 2px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: var(--secondary);
+            border-bottom-color: var(--secondary);
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: fixed;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(199, 82, 42, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .scroll-indicator.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .scroll-indicator:hover {
+            transform: translateX(-50%) translateY(-5px);
+            box-shadow: 0 12px 32px rgba(199, 82, 42, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .content-card {
+                padding: 2.5rem 2rem;
+                border-radius: 16px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                margin-top: -50px;
+                padding: 0 1.5rem 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .content-card {
+                padding: 2rem 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Selection */
+        ::selection {
+            background: var(--accent);
+            color: white;
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Pakistani Pickles Guide</h1>
+            <p class="hero-subtitle">A Journey Through Tradition, Flavor, and Cultural Heritage</p>
+        </div>
+    </div>
 
-<h1>Pakistani Pickles Guide</h1>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="content-card">
+            <div class="intro">
+                <p>Pakistani pickles, commonly known as achar, are an essential part of everyday meals across the country. They are not simply condiments added for flavor, but cultural elements that represent tradition, patience, and a deep connection to home cooking. From fiery green chilies to sweet preserved fruits, pickles in Pakistan span a wide range of tastes and textures that reflect regional diversity and family heritage.</p>
+                
+                <p>This guide explores Pakistani pickles in detail, including how they are made, why they matter, and how related preserved foods like murabba share the same cultural roots. Understanding pickles in Pakistan is not just about taste; it is about understanding how food connects generations.</p>
+            </div>
 
-<p>
-Pakistani pickles, commonly known as achar, are an essential part of everyday meals across the country. 
-They are not simply condiments added for flavor, but cultural elements that represent tradition, patience, 
-and a deep connection to home cooking. From fiery green chilies to sweet preserved fruits, pickles in Pakistan 
-span a wide range of tastes and textures that reflect regional diversity and family heritage.
-</p>
+            <h2>The Cultural Importance of Pickles in Pakistan</h2>
+            
+            <p>In Pakistani households, a meal is rarely considered complete without something on the side that adds intensity. Pickles fill this role perfectly. Whether the main dish is mild or rich, achar provides balance through spice, sourness, or sweetness.</p>
+            
+            <p>Pickles are deeply tied to family traditions. Many households prepare their own pickles once or twice a year, using seasonal produce. These batches are stored carefully and consumed slowly, sometimes lasting an entire year. The act of making pickles often brings families together, turning food preparation into a shared ritual.</p>
+            
+            <div class="highlight-box">
+                <p>Unlike fast food or packaged snacks, pickles represent slow food. They require time, sunlight, and careful attention. This is one of the reasons they hold such emotional value in Pakistani culture.</p>
+            </div>
 
-<p>
-This guide explores Pakistani pickles in detail, including how they are made, why they matter, 
-and how related preserved foods like murabba share the same cultural roots. 
-Understanding pickles in Pakistan is not just about taste; it is about understanding how food 
-connects generations.
-</p>
+            <div class="divider"></div>
 
-<h2>The Cultural Importance of Pickles in Pakistan</h2>
+            <h2>How Traditional Pakistani Pickles Are Made</h2>
+            
+            <p>Traditional pickle-making begins with selecting the right ingredients. Mangoes must be raw and firm. Green chilies should be fresh and aromatic. Lemons, garlic, and ginger are chosen carefully for strength and quality.</p>
+            
+            <p>Ingredients are washed thoroughly and dried completely to remove moisture. This step is critical, as even a small amount of water can affect preservation. Spices are roasted lightly to release aroma, then ground or crushed according to family preference.</p>
+            
+            <p>Oil, usually mustard or a blend of oils, is heated and mixed with spices before being combined with the main ingredient. The mixture is then stored in clean glass jars and often placed in sunlight for several days. This allows flavors to develop naturally and deeply.</p>
 
-<p>
-In Pakistani households, a meal is rarely considered complete without something on the side that adds intensity. 
-Pickles fill this role perfectly. Whether the main dish is mild or rich, achar provides balance through spice, 
-sourness, or sweetness.
-</p>
+            <div class="divider"></div>
 
-<p>
-Pickles are deeply tied to family traditions. Many households prepare their own pickles once or twice a year, 
-using seasonal produce. These batches are stored carefully and consumed slowly, sometimes lasting an entire year. 
-The act of making pickles often brings families together, turning food preparation into a shared ritual.
-</p>
+            <h2>Popular Types of Pakistani Pickles</h2>
 
-<p>
-Unlike fast food or packaged snacks, pickles represent slow food. They require time, sunlight, 
-and careful attention. This is one of the reasons they hold such emotional value in Pakistani culture.
-</p>
-  
-<h2>How Traditional Pakistani Pickles Are Made</h2>
+            <div class="section-card">
+                <h3>Mango Pickle</h3>
+                <p>Mango pickle is the most iconic form of achar in Pakistan. It balances spice, sourness, and oil in a way that pairs well with almost any meal. Every household has its own variation, making mango pickle deeply personal.</p>
+            </div>
 
-<p>
-Traditional pickle-making begins with selecting the right ingredients. Mangoes must be raw and firm. 
-Green chilies should be fresh and aromatic. Lemons, garlic, and ginger are chosen carefully for strength and quality.
-</p>
+            <div class="section-card">
+                <h3>Green Chili Pickle</h3>
+                <p>Green chili pickle is sharp, spicy, and powerful. Usually eaten in small quantities, it instantly elevates simple foods like lentils or rice.</p>
+            </div>
 
-<p>
-Ingredients are washed thoroughly and dried completely to remove moisture. This step is critical, 
-as even a small amount of water can affect preservation. Spices are roasted lightly to release aroma, 
-then ground or crushed according to family preference.
-</p>
+            <div class="section-card">
+                <h3>Garlic Pickle</h3>
+                <p>Garlic pickle is known for its bold flavor. It is intense and aromatic, often enjoyed by those who prefer strong tastes and warming foods.</p>
+            </div>
 
-<p>
-Oil, usually mustard or a blend of oils, is heated and mixed with spices before being combined with the main ingredient. 
-The mixture is then stored in clean glass jars and often placed in sunlight for several days. 
-This allows flavors to develop naturally and deeply.
-</p>
+            <div class="section-card">
+                <h3>Lemon and Ginger Pickles</h3>
+                <p>These pickles offer a cleaner, sharper profile. Lemon pickle provides brightness, while ginger pickle adds heat with depth.</p>
+            </div>
 
-<h2>Popular Types of Pakistani Pickles</h2>
+            <div class="section-card">
+                <h3>Mixed Vegetable Pickles</h3>
+                <p>Mixed pickles combine carrots, cauliflower, turnips, and chilies. They showcase variety and balance, making them popular in many regions.</p>
+            </div>
 
-<h3>Mango Pickle</h3>
-<p>
-Mango pickle is the most iconic form of achar in Pakistan. It balances spice, sourness, and oil in a way 
-that pairs well with almost any meal. Every household has its own variation, making mango pickle deeply personal.
-</p>
+            <div class="divider"></div>
 
-<h3>Green Chili Pickle</h3>
-<p>
-Green chili pickle is sharp, spicy, and powerful. Usually eaten in small quantities, 
-it instantly elevates simple foods like lentils or rice.
-</p>
+            <h2>Murabba: The Sweet Companion to Pickles</h2>
+            
+            <p>While pickles are often spicy or sour, Pakistani food culture also values sweetness in preserved form. Murabba is a traditional sweet preserve made from fruits such as amla, apple, carrot, or mango. It is cooked slowly in sugar syrup until the fruit becomes soft and glossy.</p>
+            
+            <p>Murabba is often eaten in small amounts, sometimes with breakfast or as a digestive accompaniment. Like pickles, it is not consumed casually. It is respected for its flavor and perceived health benefits.</p>
 
-<h3>Garlic Pickle</h3>
-<p>
-Garlic pickle is known for its bold flavor. It is intense and aromatic, often enjoyed by those 
-who prefer strong tastes and warming foods.
-</p>
+            <div class="info-box">
+                <h3>Traditional Sweet Preserves</h3>
+                <p>Pickles and murabba may differ in taste, but they share the same philosophy. Both are preserved foods that require time, care, and patience. Both are rooted in traditional kitchens where food was prepared thoughtfully rather than quickly.</p>
+                
+                <p>For those interested in traditional sweet preserves, you can explore options to <a href="https://thenanissecret.com/collections/murabba" target="_blank" rel="noopener">buy murabba in pakistan</a> that follow authentic preparation styles.</p>
+            </div>
 
-<h3>Lemon and Ginger Pickles</h3>
-<p>
-These pickles offer a cleaner, sharper profile. Lemon pickle provides brightness, 
-while ginger pickle adds heat with depth.
-</p>
+            <div class="divider"></div>
 
-<h3>Mixed Vegetable Pickles</h3>
-<p>
-Mixed pickles combine carrots, cauliflower, turnips, and chilies. 
-They showcase variety and balance, making them popular in many regions.
-</p>
+            <h2>Homemade vs Commercial Pickles</h2>
+            
+            <p>The main difference between homemade and commercial pickles lies in intention. Commercial products prioritize consistency, shelf life, and mass appeal. Homemade pickles prioritize satisfaction, familiarity, and cultural accuracy.</p>
+            
+            <p>Homemade pickles may vary slightly in taste from batch to batch, but this variation is part of their charm. They reflect human touch rather than industrial precision.</p>
+            
+            <p>Preserved foods made traditionally often use fewer artificial additives, relying instead on oil, salt, sugar, and time.</p>
 
-<h2>Murabba: The Sweet Companion to Pickles</h2>
+            <h2>Why Pakistani Pickles Taste So Distinct</h2>
+            
+            <p>Pakistani pickles are bold by design. They are not meant to be subtle. Spices are used generously, and flavors are layered rather than muted.</p>
+            
+            <p>This boldness reflects Pakistani cuisine as a whole, where food is meant to engage all senses. Pickles play a supporting role, but their impact is powerful.</p>
 
-<p>
-While pickles are often spicy or sour, Pakistani food culture also values sweetness in preserved form. 
-Murabba is a traditional sweet preserve made from fruits such as amla, apple, carrot, or mango. 
-It is cooked slowly in sugar syrup until the fruit becomes soft and glossy.
-</p>
+            <div class="divider"></div>
 
-<p>
-Murabba is often eaten in small amounts, sometimes with breakfast or as a digestive accompaniment. 
-Like pickles, it is not consumed casually. It is respected for its flavor and perceived health benefits.
-</p>
+            <h2>Pickles and Food Memory</h2>
+            
+            <p>One of the most powerful aspects of pickles is their connection to memory. A single smell or taste can bring back childhood moments, family gatherings, and shared meals.</p>
+            
+            <p>For Pakistanis living abroad, pickles and murabba often become emotional links to home. They provide comfort and familiarity in unfamiliar surroundings.</p>
 
-<p>
-Pickles and murabba may differ in taste, but they share the same philosophy. 
-Both are preserved foods that require time, care, and patience. Both are rooted in traditional kitchens 
-where food was prepared thoughtfully rather than quickly.
-</p>
+            <h2>Preserving Tradition in Modern Times</h2>
+            
+            <p>Modern lifestyles leave little time for traditional food preparation. As a result, authentic preserved foods have become even more valuable.</p>
+            
+            <p>Maintaining these traditions ensures that future generations understand where their food comes from and why it matters. Pickles and murabba are not outdated practices; they are cultural assets.</p>
 
-<p>
-For those interested in traditional sweet preserves, you can explore options to 
-<a href="https://thenanissecret.com/collections/murabba" target="_blank" rel="noopener noreferrer">buy murabba in pakistan</a> 
-that follow authentic preparation styles.
-</p>
+            <div class="divider"></div>
 
-<h2>Homemade vs Commercial Pickles</h2>
+            <h2>Conclusion</h2>
+            
+            <p>This Pakistani pickles guide highlights the importance of achar and preserved foods in daily life. From spicy mango and green chili pickles to sweet murabba, these foods represent patience, tradition, and identity.</p>
+            
+            <p>As long as Pakistani kitchens continue to value homemade flavors, pickles and preserves will remain an essential part of the culture. They remind us that food is not just nourishment, but memory made edible.</p>
+        </div>
+    </div>
 
-<p>
-The main difference between homemade and commercial pickles lies in intention. 
-Commercial products prioritize consistency, shelf life, and mass appeal. 
-Homemade pickles prioritize satisfaction, familiarity, and cultural accuracy.
-</p>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Pakistani Pickles Guide. Preserving Tradition, One Jar at a Time.</p>
+        <p><a href="https://thenanissecret.com" target="_blank" rel="noopener">Explore Authentic Pakistani Preserves</a></p>
+    </footer>
 
-<p>
-Homemade pickles may vary slightly in taste from batch to batch, but this variation is part of their charm. 
-They reflect human touch rather than industrial precision.
-</p>
+    <!-- Scroll to Top Button -->
+    <div class="scroll-indicator" id="scrollTop">↑</div>
 
-<p>
-Preserved foods made traditionally often use fewer artificial additives, relying instead on oil, salt, sugar, and time.
-</p>
+    <script>
+        // Scroll to top functionality
+        const scrollBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
 
-<h2>Why Pakistani Pickles Taste So Distinct</h2>
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
 
-<p>
-Pakistani pickles are bold by design. They are not meant to be subtle. 
-Spices are used generously, and flavors are layered rather than muted.
-</p>
+        // Animate sections on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-<p>
-This boldness reflects Pakistani cuisine as a whole, where food is meant to engage all senses. 
-Pickles play a supporting role, but their impact is powerful.
-</p>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
 
-<h2>Pickles and Food Memory</h2>
-
-<p>
-One of the most powerful aspects of pickles is their connection to memory. 
-A single smell or taste can bring back childhood moments, family gatherings, and shared meals.
-</p>
-
-<p>
-For Pakistanis living abroad, pickles and murabba often become emotional links to home. 
-They provide comfort and familiarity in unfamiliar surroundings.
-</p>
-
-<h2>Preserving Tradition in Modern Times</h2>
-
-<p>
-Modern lifestyles leave little time for traditional food preparation. 
-As a result, authentic preserved foods have become even more valuable.
-</p>
-
-<p>
-Maintaining these traditions ensures that future generations understand where their food comes from 
-and why it matters. Pickles and murabba are not outdated practices; they are cultural assets.
-</p>
-
-<h2>Conclusion</h2>
-
-<p>
-This Pakistani pickles guide highlights the importance of achar and preserved foods in daily life. 
-From spicy mango and green chili pickles to sweet murabba, these foods represent patience, tradition, and identity.
-</p>
-
-<p>
-As long as Pakistani kitchens continue to value homemade flavors, pickles and preserves will remain 
-an essential part of the culture. They remind us that food is not just nourishment, but memory made edible.
-</p>
-
+        document.querySelectorAll('.section-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
